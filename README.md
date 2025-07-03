@@ -352,3 +352,10 @@ chess-analysis-platform/
 │   └── init.sql
 └── static/
 ```
+## Future Development 
+-Implement CPU-specific python engine
+-Reduce Database Query Latency
+-Vector Database System Implementation for move similarity search
+
+
+###this is a chess-coach-system that intends to make you feel chess.Once a Grandmaster was a beginner.
