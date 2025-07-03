@@ -2,7 +2,7 @@
 
 A comprehensive chess analysis application featuring AI-powered position evaluation, game database management, and intelligent move bookmarking with search capabilities.
 
-## 📚 Table of Contents
+## Table of Contents
 
 - [Features](#features)
 - [Installation](#installation)
@@ -30,7 +30,7 @@ A comprehensive chess analysis application featuring AI-powered position evaluat
 - Best move recommendations with eval scores
 - Tactical motif recognition and strategic insight generation
 
-### 🗂️ Database Management
+###  Database Management
 - Full PGN game storage/retrieval
 - Position bookmarking with embedded AI insights
 - Advanced move search by tags, assessments, and notations
@@ -309,7 +309,7 @@ psql -U chess_user -d chess_coach -c "SELECT version();"
 psql -U chess_user -d chess_coach -c "SELECT * FROM pg_extension WHERE extname = 'pg_trgm';"
 ```
 
-### 🌐 API
+###  API
 
 ```bash
 curl http://192.168.29.161:8000/health
