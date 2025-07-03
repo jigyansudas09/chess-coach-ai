@@ -353,9 +353,17 @@ chess-analysis-platform/
 └── static/
 ```
 ## Future Development 
--Implement CPU-specific python engine
--Reduce Database Query Latency
--Vector Database System Implementation for move similarity search
+```
+|──Implement CPU-specific python engine
+|──Reduce Database Query Latency
+|──Vector Database System Implementation for move similarity search
+|──Move Highlight and Arrows for calulation in UI
+|──Stockfish Integration(optional)
+|──Endgames move support DataTable integration
+|──Mark blunder ,miss,great, best and excellent moves
+|──Knight Move HeatMap("How does a knight move?")
+
+```
 
 
-###this is a chess-coach-system that intends to make you feel chess.Once a Grandmaster was a beginner.
+####this is a chess-coach-system that intends to make you feel chess.Once a Grandmaster was a beginner.
