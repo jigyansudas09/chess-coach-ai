@@ -16,7 +16,7 @@ A comprehensive chess analysis application featuring AI-powered position evaluat
 - [License](#license)
 - [Project Structure](#project-structure)
 
-## ✅ Features
+## Features
 
 ### ♟️ Core Chess Features
 - Interactive chess board with drag-and-drop piece movement
@@ -24,7 +24,7 @@ A comprehensive chess analysis application featuring AI-powered position evaluat
 - Move validation powered by chess.js
 - Complete game history with move navigation
 
-### 🧠 AI-Powered Analysis
+###  AI-Powered Analysis
 - python-chess engine integration
 - HuggingFace NLP-powered AI coach
 - Best move recommendations with eval scores
@@ -36,7 +36,7 @@ A comprehensive chess analysis application featuring AI-powered position evaluat
 - Advanced move search by tags, assessments, and notations
 - Tag-based classification of positions
 
-### 🔍 Search Capabilities
+### Search Capabilities
 - Fuzzy and partial text matching
 - Multi-field filtering (notation, assessment, tags)
 - Efficient pagination for large datasets
@@ -77,7 +77,7 @@ GRANT ALL PRIVILEGES ON DATABASE chess_coach TO chess_user;
 psql -U chess_user -d chess_coach -f database/init.sql
 ```
 
-## 🚀 Application Startup
+##  Application Startup
 
 ### Configure Database (`chess_db.py`)
 
@@ -114,7 +114,7 @@ DEFAULT_TIMEOUT = 30
 CACHE_ENABLED = True
 ```
 
-## 💡 Usage
+## Usage
 
 ### Operations
 
@@ -136,9 +136,9 @@ CACHE_ENABLED = True
 - Bookmark and filter moves
 - Tag-based fuzzy search
 
-## 🧩 API Documentation
+## API Documentation
 
-### 🗃️ Game Endpoints
+### Game Endpoints
 
 **POST /api/save-game**
 
@@ -154,7 +154,7 @@ CACHE_ENABLED = True
 **GET /api/game/{game_id}**  
 **DELETE /api/game/{game_id}**
 
-### 📌 Move Endpoints
+### Move Endpoints
 
 **POST /api/save-move**
 
@@ -174,7 +174,7 @@ CACHE_ENABLED = True
 **GET /api/search-moves?query=tactics**  
 **DELETE /api/move/{move_id}**
 
-### 🔍 Analysis Endpoints
+###  Analysis Endpoints
 
 **POST /analyze**
 
@@ -195,7 +195,7 @@ CACHE_ENABLED = True
 }
 ```
 
-## 🗃️ Database Schema
+##  Database Schema
 
 ### `games` Table
 
@@ -237,7 +237,7 @@ CREATE INDEX idx_moves_notation_trgm ON moves USING GIN(move_notation gin_trgm_o
 CREATE INDEX idx_moves_assessment_trgm ON moves USING GIN(position_assessment gin_trgm_ops);
 ```
 
-## 🧰 Technologies Used
+##  Technologies Used
 
 ### Frontend
 - HTML5 / CSS3 / JavaScript (ES6+)
@@ -252,7 +252,7 @@ CREATE INDEX idx_moves_assessment_trgm ON moves USING GIN(position_assessment gi
 
 ## 🛠️ Major Development Challenges
 
-### 🧩 chess.js Version Inconsistencies
+###  chess.js Version Inconsistencies
 
 **Problem**: `load()` returns vary by version  
 **Fix**: Use exception-based validation
@@ -267,7 +267,7 @@ game.load(fen);
 
 ---
 
-### 💬 Double Encoding in FEN Passing
+### Double Encoding in FEN Passing
 
 **Problem**: HTML + JS encoding caused corrupted FEN  
 **Fix**: Use `data-fen` attribute
@@ -282,7 +282,7 @@ data-fen="${escapeHtml(fen)}"
 
 ---
 
-### 🔍 PostgreSQL Search Bottlenecks
+###  PostgreSQL Search Bottlenecks
 
 **Problem**: LIKE queries slow  
 **Fix**: GIN + trigram indexes
@@ -294,12 +294,12 @@ CREATE INDEX idx_moves_trgm ON moves USING GIN(column gin_trgm_ops);
 
 ---
 
-### 🔁 Tab Switching Clears Board
+### Tab Switching Clears Board
 
 **Problem**: Board resets before load completes  
 **Fix**: Delay tab switch until after data load
 
-## 🧪 Troubleshooting
+## Troubleshooting
 
 ### 🧵 Database
 
@@ -317,7 +317,7 @@ curl http://192.168.29.161:8000/api/games
 curl "http://192.168.29.161:8000/api/search-moves?query=test"
 ```
 
-### 🧮 Performance
+###  Performance
 
 ```sql
 EXPLAIN ANALYZE SELECT * FROM moves WHERE 'tactics' = ANY(tags);
@@ -325,7 +325,7 @@ REINDEX INDEX idx_moves_tags;
 ANALYZE moves;
 ```
 
-### 🧾 Frontend Debug
+###  Frontend Debug
 
 ```js
 console.log('loadPgn:', typeof game.loadPgn);
@@ -336,7 +336,7 @@ console.log('load:', typeof game.load);
 
 MIT License — see `LICENSE` file.
 
-## 🗂️ Project Structure
+##  Project Structure
 
 ```
 chess-analysis-platform/
