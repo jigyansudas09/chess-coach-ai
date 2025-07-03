@@ -366,5 +366,5 @@ chess-analysis-platform/
 ```
 
 
-<small>This is a chess-coach-system that intends to make you feel chess. Once a Grandmaster was a beginner.</small>
+<small> Once a Grandmaster was a beginner.</small>
 
