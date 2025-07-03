@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "bootstrap": "^5.3.7",
+    "chess.js": "^1.4.0",
+    "http-server": "^14.1.1",
+    "jquery": "^3.7.1",
+    "stockfish": "^16.0.0"
+  }
+}
